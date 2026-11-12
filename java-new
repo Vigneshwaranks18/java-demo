@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        
+        // Keep the main thread alive indefinitely
+        while (true) {
+            try {
+                // Sleep for 60 seconds to keep CPU usage low
+                Thread.sleep(60000);
+            } catch (InterruptedException e) {
+                System.out.println("Application interrupted, shutting down.");
+                break;
+            }
+        }
+    }
+}
